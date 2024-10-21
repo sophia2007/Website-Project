@@ -4,10 +4,10 @@ function menuActions(menu) {
     animateIcon(menu);
 
     if (menuOpen){
-        changeNav("0", "0", "rgba(0,0,0,0.4)");
+        changeNav("0", "0");
         menuOpen = false;
     } else {
-        changeNav("250px", "250px", "white");
+        changeNav("250px", "250px");
         menuOpen = true;
     }
 }
@@ -21,5 +21,4 @@ function animateIcon(icon) {
 function changeNav(width, margin, color) {
     document.getElementById("side-nav").style.width = width;
     document.getElementById("main").style.marginLeft = margin;
-    document.body.style.backgroundColor = color;
 }
