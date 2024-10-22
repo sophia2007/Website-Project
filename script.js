@@ -22,3 +22,17 @@ function changeNav(width, margin, color) {
     document.getElementById("side-nav").style.width = width;
     document.getElementById("main").style.marginLeft = margin;
 }
+
+function selectPage(page) {
+    const pages = ["menu", "students", "layout", "seating", "display"];
+
+    for (let i = 0; i < pages[i].length; i++) {
+        if (pages[i] != page) {
+            document.getElementById(pages[i]).style.opacity = 0;
+        } else {
+            document.getElementById(pages[i]).style.opacity = 1;
+        }
+    }
+}
+
+

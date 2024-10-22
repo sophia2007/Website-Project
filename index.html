@@ -7,9 +7,21 @@
     <meta http-equiv='pragma' content='no-cache'>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Import Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Schoolbell&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div id="side-nav" class="side-nav">
+        <div onclick="selectPage('menu')"><a href="#">Menu</a></div>
+        <div onclick="selectPage('students')"><a href="#Students">Your Students</a></div>
+        <div onclick="selectPage('layout')"><a href="#Layout">Change Layout</a></div>
+        <div onclick="selectPage('seating')"><a href="#Seating">Change Seating</a></div>
+        <div onclick="selectPage('display')"><a href="#Display">Display</a></div>
+    </div>
 
     <div class="menu-icon" onclick="menuActions(this)">
         <div class="bar1"></div>
@@ -17,20 +29,35 @@
         <div class="bar3"></div>
     </div>
 
-    <div id="side-nav" class="side-nav">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+    <div id="main">
+
+        <div id="menu">
+            <div class="header">
+                <h1> Seating Plan Maker </h1>
+                <p> A simple, interactive seating plan for teachers. </p>
+            </div>
+        </div>
+
+        <div id="students">
+            <p> lovely </p>
+        </div>
+
+        <div id="layout">
+            <p> the way </p>
+        </div>
+
+        <div id="seating">
+            <p> you </p>
+        </div>
+
+        <div id="display">
+            <p> love </p>
+        </div>
+
+
     </div>
 
-    <div id="main">
-        <div class="header">
-            <h1> Seating Plan Maker </h1>
-            <p> A simple, interactive seating plan for teachers. </p>
-            <button> Let's get started!</button>
-        </div>
-    </div>
+
 
     <script src="script.js"></script>
 
