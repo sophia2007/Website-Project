@@ -1,5 +1,5 @@
 body {
-    background-image: repeating-linear-gradient(0deg, rgba(255,255,255, 0.25), rgba(255,255,255, 0.25) 1px, transparent 1px, transparent 7px);
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255, 0.2), rgba(255,255,255, 0.2) 0.7px, transparent 1px, transparent 7px);
     background-color: #443417;
     font-family: "Schoolbell", cursive;
 }
@@ -7,18 +7,17 @@ body {
 h1 {
     font-size: 50px;
     font-family: "Fredericka the Great", serif;
+    color: white;
 }
 
-.header {
-    padding: 80px;
-    text-align: center;
-    background-color: darkgreen;
-    color: azure;
+p {
+    font-size: 18px;
 }
 
 .menu-icon {
     display: inline-block;
     cursor: pointer;
+    padding-left: 5px;
     position: relative;
     z-index: 2;
 }
@@ -78,25 +77,139 @@ h1 {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding: 10px;
+    
 }
 
 #menu {
-    opacity: 1;
+    height: 100%;
+    /* Any part of the element that goes above the horizontal boundaries is hidden */
+    overflow-y: hidden; 
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header {
+    padding: 80px;
+    text-align: center;
+    background-color: #175a18;
+    color: azure;
+    border-block-end-style: groove;
+    border-width: 10px;
+    border-block-color: #3e351c;
+    border-start-start-radius: 20px;
+    border-start-end-radius: 20px;
 }
 
 #students {
-    opacity: 0;
+    height: 0;
+    overflow-y: hidden;
+
+    /* Include the padding and border in an element's total width and height */
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    display: inherit;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+    .close:hover {
+        background-color: #99806a;
+        color: white;
+    }
+
+/* Style the student page header */
+.sPage-header {
+    background-color: #175a18;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.sPage-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
 }
 
 #layout {
-    opacity: 0;
+    height: 0;
+    overflow-y: hidden;
 }
 
 #seating {
-    opacity: 0;
+    height: 0;
+    overflow-y: hidden;
 }
 
 #display {
-    opacity: 0;
+    height: 0;
+    overflow-y: hidden;
 }
