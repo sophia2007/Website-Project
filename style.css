@@ -2,6 +2,9 @@ body {
     background-image: repeating-linear-gradient(90deg, rgba(255,255,255, 0.2), rgba(255,255,255, 0.2) 0.7px, transparent 1px, transparent 7px);
     background-color: #443417;
     font-family: "Schoolbell", cursive;
+
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 h1 {
@@ -78,9 +81,6 @@ p {
     height: 0;
     /* Any part of the element that goes above the horizontal boundaries is hidden */
     overflow-y: hidden; 
-
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .header {
@@ -150,18 +150,13 @@ ul li:hover {
 
 /* Clear floats after the header */
 .header:after {
-    content: "";
     display: table;
     clear: both;
 }
 
-#inputLine{
-    align-content: end;
-}
-
 /* Style the input */
 input {
-    width: 75%;
+    width: 70%;
     padding: 10px;
     padding-right: 0;
     float: left;
@@ -172,6 +167,7 @@ input {
 .addBtn {
     padding: 10px;
     padding-left: 0;
+    margin-left: 1px;
     width: 25%;
     background: #d9d9d9;
     color: #555;
@@ -193,7 +189,7 @@ input {
 }
 
 .spot {
-    float:left;
+    float: left;
     width: 100px;
     height: 90px;
     margin: 10px;
