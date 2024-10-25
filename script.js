@@ -4,10 +4,10 @@ function menuActions(menu) {
     animateIcon(menu);
 
     if (menuOpen){
-        changeNav("0", "0");
+        changeNav("0");
         menuOpen = false;
     } else {
-        changeNav("250px", "250px");
+        changeNav("250px");
         menuOpen = true;
     }
 }
@@ -18,9 +18,8 @@ function animateIcon(icon) {
 }
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-function changeNav(width, margin, color) {
+function changeNav(width) {
     document.getElementById("side-nav").style.width = width;
-    document.getElementById("main").style.marginLeft = margin;
 }
 
 function selectPage(page) {
@@ -67,4 +66,20 @@ function checkClosed() {
             div.style.display = "none";
         }
     }
+}
+
+function drag(ev) {
+    // Add the target element's id to the data transfer object
+    ev.dataTransfer.setData("text/plain", ev.target.id);
+    ev.dataTransfer.dropEffect = "";
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
 }
