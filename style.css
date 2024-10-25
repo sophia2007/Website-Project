@@ -198,10 +198,14 @@ input {
     background-color: #00000033;
 }
 
-#seat {
+.seat {
     object-fit: cover;
     width: 100%;
     height: 90px;
+}
+
+.dragging {
+    opacity: 0.5;
 }
 
 #seating {

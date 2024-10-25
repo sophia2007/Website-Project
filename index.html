@@ -56,11 +56,15 @@
                 <span onclick="" class="addBtn">Confirm</span>
             </div>
 
-            <div class="spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="spot" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <!--each seat is identified/moved by their id-->
+                <img id="seat1" class="seat" src="Seat.png" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)" />
+            </div>
 
             <div class="spot" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <img id="seat" src="Seat.png" draggable="true" ondragstart="drag(event)" />
+                <img id="seat2" class="seat" src="Seat.png" draggable="true" ondragstart="dragStart(event)" ondragend="dragEnd(event)"/>
             </div>
+
 
             <div class="spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
             <div class="spot" ondrop="drop(event)" ondragover="allowDrop(event)"></div>

@@ -68,10 +68,15 @@ function checkClosed() {
     }
 }
 
-function drag(ev) {
+function dragStart(ev) {
     // Add the target element's id to the data transfer object
     ev.dataTransfer.setData("text/plain", ev.target.id);
-    ev.dataTransfer.dropEffect = "";
+    ev.target.classList.add("dragging");
+}
+
+function dragEnd(ev) {
+    ev.target.classList.remove("dragging");
+    drop(ev);
 }
 
 function allowDrop(ev) {
