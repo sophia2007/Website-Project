@@ -1,8 +1,8 @@
+/* --------------------------- Entire Website -----------------------------*/
 body {
     background-image: repeating-linear-gradient(90deg, rgba(255,255,255, 0.2), rgba(255,255,255, 0.2) 0.7px, transparent 1px, transparent 7px);
     background-color: #443417;
-    font-family: "Schoolbell", cursive;
-
+    font-family: Copperplate, Papyrus, fantasy;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -20,9 +20,11 @@ p {
 .menu-icon {
     display: inline-block;
     cursor: pointer;
-    padding-left: 5px;
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    top: 10px;
+    bottom: 5px;
+    left: 10px;
+    z-index: 5;
 }
 
 .bar1, .bar2, .bar3 {
@@ -53,7 +55,7 @@ p {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 4; /* Stay on top */
     top: 0;
     left: 0;
     background-color: rgb(40, 35, 17, 0.95); /* Brown*/
@@ -77,13 +79,10 @@ p {
     color: #f1f1f1;
 }
 
-#menu {
-    height: 0;
-    /* Any part of the element that goes above the horizontal boundaries is hidden */
-    overflow-y: hidden; 
-}
+/* --------------------------- Re-used throughout Pages -----------------------------*/
 
 .header {
+    margin-top: 50px;
     padding: 80px;
     text-align: center;
     background-color: #175a18;
@@ -93,10 +92,65 @@ p {
     border-block-color: #3e351c;
     border-start-start-radius: 20px;
     border-start-end-radius: 20px;
+    height: auto;
 }
 
-#students {
+/* Clear floats after the header */
+.header:after {
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+input {
+    width: 70%;
+    padding: 10px;
+    padding-right: 0;
+    float: left;
+    font-size: 16px;
+    height: 23px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    margin-left: 1px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+}
+
+/* --------------------------- Menu Page -----------------------------*/
+
+#menu {
     height: 100%;
+    /* Any part of the element that goes above the horizontal boundaries is hidden */
+    overflow-y: hidden;
+}
+
+.paragraph {
+    padding: 40px;
+    text-align: center;
+    background-color: #175a18;
+    color: azure;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* --------------------------- Student Page -----------------------------*/
+
+#students {
+    height: 0;
     overflow-y: hidden;
 
     /* Include the padding and border in an element's total width and height */
@@ -148,40 +202,7 @@ ul li:hover {
     color: white;
 }
 
-/* Clear floats after the header */
-.header:after {
-    display: table;
-    clear: both;
-}
-
-/* Style the input */
-input {
-    width: 70%;
-    padding: 10px;
-    padding-right: 0;
-    float: left;
-    font-size: 16px;
-}
-
-/* Style the "Add" button */
-.addBtn {
-    padding: 10px;
-    padding-left: 0;
-    margin-left: 1px;
-    width: 25%;
-    background: #d9d9d9;
-    color: #555;
-    float: left; 
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 0;
-}
-
-.addBtn:hover {
-    background-color: #bbb;
-}
+/* --------------------------- Layout Page -----------------------------*/
 
 #layout {
     height: 0;
@@ -196,24 +217,75 @@ input {
     padding: 10px;
     border: 1px solid black;
     background-color: #00000033;
+    position: relative;
+    z-index: 1;
 }
 
 .seat {
     object-fit: cover;
     width: 100%;
     height: 90px;
+    display: initial;
+    z-index: 2;
 }
 
 .dragging {
     opacity: 0.5;
 }
 
+.layoutHeader {
+    display: none;
+}
+
+/* --------------------------- Seating Page -----------------------------*/
 #seating {
     height: 0;
     overflow-y: hidden;
 }
 
+.btn {
+    padding: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.studentBlock {
+    object-fit: cover;
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #9e9f65;
+    position: absolute;
+    z-index: 3;
+}
+
+.seatingHeader {
+    display: none;
+}
+
+.studentClassroom {
+    position: relative;
+}
+
+/* --------------------------- Display Page -----------------------------*/
+
 #display {
     height: 0;
     overflow-y: hidden;
+}
+
+.displayHeader {
+    display: none;
 }
