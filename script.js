@@ -54,11 +54,11 @@ function selectPage(page) {
 
 }
 
+// Allows for the pages between Layout, Seating and Display to have different headers but the same seats grid
 function makeDisplay(lHeader, sHeader, dHeader, spotVisible, seatDroppable, seatMoveable) {
     document.getElementById("layoutHeader").style.display = lHeader;
     document.getElementById("seatingHeader").style.display = sHeader;
     document.getElementById("displayHeader").style.display = dHeader;
-
 
     document.querySelectorAll(".spot").forEach(function (spot) {
         if (spotVisible) {
@@ -108,6 +108,7 @@ function newStudent() {
     line.appendChild(span);
 }
 
+// Make the students as they've been entered in the Student page when the update button is clicked in Seating page
 function makeStudent() {
     var allStudents = document.getElementById("studentList").children;
     
